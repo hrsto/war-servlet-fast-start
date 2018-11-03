@@ -1,6 +1,6 @@
 # Quick start with Servlet in a .war archive
 
-Random notes self:
+Random notes:
 
 * For quick auto deploy to a local WildFly instance when packaging, add to `pom.xml/build/plugins`:
 
