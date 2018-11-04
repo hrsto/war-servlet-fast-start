@@ -21,7 +21,7 @@ Random notes:
     </plugin>
     ```
 
-* To enable remote debugging, launch server instance with with jvn options:
+* To enable remote debugging, launch server instance with with jvm options:
     ```
     -agentlib:jdwp=transport=dt_socket,address=<SOME IP>:8787,server=y,suspend=n
     ```
@@ -53,25 +53,7 @@ Random notes:
         <url-pattern>/api/*</url-pattern>
     </servlet-mapping>
     ```
-
-* For auto local deployment to wildfly, in `pom.xml` add to `build/plugins`:
-
-    ```xml
-    <plugin>
-        <groupId>org.wildfly.plugins</groupId>
-        <artifactId>wildfly-maven-plugin</artifactId>
-        <version>1.2.2.Final</version>
-        <executions>
-            <execution>
-                <id>deploy</id>
-                <phase>package</phase>
-                <goals>
-                    <goal>deploy</goal>
-                </goals>
-            </execution>
-        </executions>
-    </plugin>
-    ```
+    
 * Files in the `src/main/resources/` folder are accessed using:
 
     ```java
@@ -107,7 +89,7 @@ Random notes:
 
 ## Running:
 * `mvn clean package`
-* `then deploy somehow`
+* `then somehow deploy ./target/war-servlet-fast-start-VERSION.war`
 
 ---
 
