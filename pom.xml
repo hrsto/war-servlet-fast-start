@@ -7,26 +7,6 @@
   <version>0.1-SNAPSHOT</version>
   <name>${project.artifactId}</name>
   <url>http://www.webarity.com</url>
-  <profiles>
-    <profile>
-      <id>deploy</id>
-      <activation>
-        <jdk>9</jdk>
-      </activation>
-      <properties>
-        <java.version>9</java.version>
-      </properties>
-    </profile>
-    <profile>
-      <id>dev</id>
-      <activation>
-        <jdk>10</jdk>
-      </activation>
-      <properties>
-        <java.version>10</java.version>
-      </properties>
-    </profile>
-  </profiles>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -65,7 +45,8 @@
           <!-- <compilerArguments>
               
           </compilerArguments> -->
-          <release>${java.version}</release>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
       <plugin>
