@@ -5,6 +5,9 @@ http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <bean class="com.webarity.controllers.TestCtrl">
-        <property name="qweee" value="${testFilterVal}"/>
+        <property name="someString" value="${testFilterVal}"/>
+    </bean>
+    <bean name="testEndpoint" class="com.webarity.controllers.TestCtrl">
+        <property name="someString" value="${testFilterVal}"/>
     </bean>
 </beans>

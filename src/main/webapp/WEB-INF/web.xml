@@ -19,8 +19,28 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>app</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/main</url-pattern>
     </servlet-mapping>
+
+    <jsp-config>
+        <jsp-property-group>
+            <display-name>test</display-name>
+            <url-pattern>*.jsp</url-pattern>
+            <include-prelude>/fragments/head.jspf</include-prelude>
+            <include-coda>/fragments/tail.jspf</include-coda>
+        </jsp-property-group>
+    </jsp-config>
+
+    <servlet>
+        <servlet-name>testEndpoint</servlet-name>
+        <servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>testEndpoint</servlet-name>
+        <url-pattern>/testEndpoint</url-pattern>
+    </servlet-mapping>
+
 
     <filter>
         <filter-name>requestContextFilter</filter-name>
