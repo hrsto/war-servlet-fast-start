@@ -1,0 +1,12 @@
+<taglib xsi:schemaLocation="http://java.sun.com/xml/ns/javaee webjsptaglibrary_2_1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+
+    <tlib-version>1.0.0</tlib-version>
+    <uri>https://www.webarity.com/tlib/blabla</uri>
+
+    <tag>
+        <name>customTestTag</name>
+        <tag-class>com.webarity.tagHandlers.FirstTagHandler</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
+</taglib>
